@@ -5,7 +5,7 @@ export async function getAllTeams(){
         const response = await Api.get(`/teams`);
 
         if (response.status == 200) {
-            return response.data;
+            return response.data.data;
         }
     } catch (error) {
         console.log("Erro ao obter times");
