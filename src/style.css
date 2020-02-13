@@ -1,0 +1,27 @@
+.table thead th {
+    border-bottom: 2px solid #fff !important;
+    border-top: 2px solid #fff !important;
+}
+
+.table thead th:first-child {
+    border-left: 2px solid #fff !important;
+}
+
+.table thead th:last-child {
+    border-right: 2px solid #fff !important;
+}
+
+.table tbody td {
+    border-bottom: none;
+    border-top: none;
+}
+
+.table tbody tr:last-child {
+    border-bottom: 2px solid #fff !important;
+}
+
+.table tbody tr {
+    border-left: 2px solid #fff !important;
+    border-right: 2px solid #fff !important;
+    border-bottom: 1px solid #fff !important;
+}
