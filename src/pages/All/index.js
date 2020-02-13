@@ -3,10 +3,12 @@ import { getTeamInfo } from '../../service/Utils';
 import { getAllTeams } from '../../service/service';
 
 import './styles.css';
+import Loader from './../../shared/loader';
 
 export default function All() {
     const [ teams, setTeams ] = useState([]);
     const [ closeDiv, setCloseDiv ] = useState('</div><div className="row">');
+    const [ loader, setLoader ] = useState(true);
 
     useEffect(() => {
         function handleGetAllTeams(){
@@ -22,14 +24,17 @@ export default function All() {
                 }
 
                 setTeams(allTeams);
-            });
 
+                setTimeout(() => {
+                    setLoader(false);
+                }, 1500)
+            });
         }
 
         handleGetAllTeams();
     }, [])
 
-    return (
+    return ((loader) ? <Loader/> :
         <>
             <div className="container">
                 <div className="row">
