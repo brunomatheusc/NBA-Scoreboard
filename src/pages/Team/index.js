@@ -24,7 +24,6 @@ export default function Team() {
                     setCity(data.city);
                     setDivision(data.division);
 
-                    // getTeamInfo(data.full_name);
                     setTeamInfo(getTeamInfo(data.full_name));
                 });
             } catch (error) {
@@ -41,52 +40,58 @@ export default function Team() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 mt-5">
-                        <div className="card">
-                            <div className="row">
-                                <div className="col-md-4">
+                        <div className="row">
+                            <div className="col-md-4">
+                                <div className="card">
                                     <img src={ teamInfo.img } alt={ name } className="card-img team-logo text-left"/>
-                                </div>
+                                    <h3>{ name }</h3>
 
-                                <div className="col-md-8 ml-0 pl-0 mt-3">
-                                    <div className="row text-left">
-                                        <div className="col-md-12">
-                                            <h3 className="text-left">{ name }</h3>
-                                            <hr className="mr-5"/>                                
-                                        </div>
-
-                                        <div className="col-md-4">
-                                            <span className="text-left"><strong>Division</strong></span><br/>
-                                            <span className="text-left">{ division }</span>
-                                        </div>
-
-                                        <div className="col-md-4">
-                                            <span className="text-left"><strong>Conferece</strong></span><br/>
-                                            <span className="text-left">{ conference }</span>
+                                    <div className="row mb-2">
+                                        <div className="col-md-12 text-center">
+                                            <span className="badge badge-danger mr-1">L</span>
+                                            <span className="badge badge-danger mr-1">L</span>
+                                            <span className="badge badge-danger mr-1">L</span>
+                                            <span className="badge badge-danger mr-1">L</span>
+                                            <span className="badge badge-danger mr-1">L</span>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
 
-                                   <hr className="mr-5"/>
+                            <div className="col-md-8 mt-3">
+                                <div className="row text-left">
+                                    <div className="col-md-4">
+                                        <span className="text-left"><strong>Division</strong></span><br/>
+                                        <span className="text-left">{ division }</span>
+                                    </div>
 
-                                    <div className="row text-left mr-5">
-                                        <div className="col-md-3">
-                                            <h3>PPG</h3>                                                    
-                                            <h4>110.0</h4>
-                                        </div>
+                                    <div className="col-md-4">
+                                        <span className="text-left"><strong>Conference</strong></span><br/>
+                                        <span className="text-left">{ conference }</span>
+                                    </div>
+                                </div>
 
-                                        <div className="col-md-3">
-                                            <h3>RPG</h3>                                                    
-                                            <h4>32.0</h4>
-                                        </div>
+                                <hr className="mr-5"/>
 
-                                        <div className="col-md-3">
-                                            <h3>APG</h3>                                                    
-                                            <h4>25.0</h4>
-                                        </div>
+                                <div className="row text-left mr-5">
+                                    <div className="col-md-3 text-left">
+                                        <h3>PPG</h3>                                                    
+                                        <h4>110.0</h4>
+                                    </div>
 
-                                        <div className="col-md-3">
-                                            <h3>STREAK</h3>                                                    
-                                            <h4>L2</h4>
-                                        </div>
+                                    <div className="col-md-3 text-left">
+                                        <h3>RPG</h3>                                                    
+                                        <h4>32.0</h4>
+                                    </div>
+
+                                    <div className="col-md-3 text-left">
+                                        <h3>APG</h3>                                                    
+                                        <h4>25.0</h4>
+                                    </div>
+
+                                    <div className="col-md-3 text-left">
+                                        <h3 className="text-center">STREAK</h3>                                                    
+                                        <h4 className="text-center">L2</h4>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +108,7 @@ export default function Team() {
                                 </div>
 
                                 <div className="col-md-12">
-                                    <table className="table team-table">
+                                    <table className="table team-table mt-3">
                                         <thead>
                                             <tr>
                                                 <th>Date</th>
@@ -116,7 +121,7 @@ export default function Team() {
                                         <tbody>
                                             <tr>
                                                 <td>12/02</td>
-                                                <td>Charlote Hornetts</td>
+                                                <td><strong>{ name }</strong></td>
                                                 <td>115 x 108</td>
                                                 <td>Minessota Timberwolves</td>
                                             </tr>

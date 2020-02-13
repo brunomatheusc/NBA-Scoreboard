@@ -2,12 +2,17 @@ import React from 'react';
 import './App.css';
 import './style.css';
 import Routes from './routes';
+import Menu from './shared/Menu';
 
 function App() {
     return (
-        <div className="App">
-            <Routes/>
-        </div>
+        <>
+            <Menu/>
+
+            <div className="App">
+                <Routes/>
+            </div>
+        </>
     );
 }
 

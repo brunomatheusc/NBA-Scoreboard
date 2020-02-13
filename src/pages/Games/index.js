@@ -43,30 +43,34 @@ export default function Games() {
                         <h2 className="text-center text-white">SCOREBOARD</h2>
                     </div>
 
-                    <div className="col-md-12 mt-2">
-                        <table className="table">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Home</th>
-                                    <th>Total</th>
-                                    <th>Away</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                { games.map((game) => {
-                                    return [
-                                        <tr key={ game.id }>
-                                            <td>{ new Date(game.date).toLocaleDateString() }</td>
-                                            <td><a href={ `/team/${game.visitor_team.id}` }>{ game.visitor_team.name }</a></td>
-                                            <td>{ game.visitor_team_score + " x " + game.home_team_score }</td>
-                                            <td><a href={ `/team/${game.home_team.id}` }>{ game.home_team.name }</a></td>
+                    <div className="col-md-12 mt-2 mb-5">
+                        <div className="card">
+                            <div className="card-body">
+                                <table className="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Home</th>
+                                            <th>Total</th>
+                                            <th>Away</th>
                                         </tr>
-                                    ]
-                                })}
-                            </tbody>
-                        </table>
+                                    </thead>
+
+                                    <tbody>
+                                        { games.map((game) => {
+                                            return [
+                                                <tr key={ game.id }>
+                                                    <td>{ new Date(game.date).toLocaleDateString() }</td>
+                                                    <td><a href={ `/team/${game.visitor_team.id}` }>{ game.visitor_team.name }</a></td>
+                                                    <td>{ game.visitor_team_score + " x " + game.home_team_score }</td>
+                                                    <td><a href={ `/team/${game.home_team.id}` }>{ game.home_team.name }</a></td>
+                                                </tr>
+                                            ]
+                                        })}
+                                    </tbody>
+                                </table>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
