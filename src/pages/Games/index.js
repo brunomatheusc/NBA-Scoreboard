@@ -34,24 +34,23 @@ export default function Games() {
         <>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12">
-                        <img src="/assets/img/logo-2.png" style={{ width: '20%' }} />
-                        {/* <img src="/assets/img/logo-1.png" style={{ width: '20%' }} /> */}
+                    <div className="col-md-12 col-12">
+                        <img src="/assets/img/logo-2.png" className="m-3" style={{ width: '20%' }} />
                     </div>
 
                     <div className="col-md-12">
                         <h2 className="text-center text-white">SCOREBOARD</h2>
                     </div>
 
-                    <div className="col-md-12 mt-2 mb-5">
+                    <div className="col-md-12 col-12 mt-2 mb-5">
                         <div className="card">
                             <div className="card-body">
-                                <table className="table">
+                                <table className="table table-responsive-sm">
                                     <thead>
                                         <tr>
                                             <th>Date</th>
                                             <th>Home</th>
-                                            <th>Total</th>
+                                            <th width="200">Total</th>
                                             <th>Away</th>
                                         </tr>
                                     </thead>

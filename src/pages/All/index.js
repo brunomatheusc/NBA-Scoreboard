@@ -48,9 +48,9 @@ export default function All() {
                         return [
                             <div className="col-md-4 mb-4 team-card" key={ index }>
                                 <a href={ `/team/${team.id}`}>
-                                    <div className="card">
+                                    <div className="card" style={{ minHeight: 250 }}>
                                         <img src={ team.img } alt={ team.name } className="card-img team-logo text-left"/>
-                                        <h3>{ team.name }</h3>
+                                        <h4>{ team.name }</h4>
                                     </div>
                                 </a>
                             </div>
